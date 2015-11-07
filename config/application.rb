@@ -22,5 +22,8 @@ module Pinteresting
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Precompile to false not sure if needed for Rails 4.2.x related to gem Devise
+    config.assets.initialize_on_precompile = false
   end
 end
